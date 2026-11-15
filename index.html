@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Khuman Keithel | Mobiles, Laptops &amp; Tech Store — Imphal</title>
+  <meta name="description" content="Khuman Keithel (Bond Khuman) in Imphal — Smartphones, laptops, kids' mini cameras, and tech gadgets. Visit us opposite Pishumthong Oinam Leikai Crematorium or order on WhatsApp." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f5f7fa;
+      --bg-dark: #0d0f12;
+      --surface: #ffffff;
+      --text: #111317;
+      --text-muted: #5a6270;
+      --border: #e3e7ee;
+      --accent: #111317;
+      --tech-blue: #2563eb;
+      --whatsapp: #16a34a;
+      --whatsapp-hover: #15803d;
+      --radius: 14px;
+      --container: 1220px;
+      --transition: 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 clamp(16px, 3vw, 28px);
+    }
+
+    /* Announcement Bar */
+    .top-bar {
+      background: var(--bg-dark);
+      color: #ffffff;
+      font-size: clamp(0.75rem, 1.8vw, 0.84rem);
+      text-align: center;
+      padding: 9px 14px;
+    }
+
+    .top-bar a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-left: 6px;
+      font-weight: 600;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(0.98rem, 2.2vw, 1.15rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 2px;
+      transition: color var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px; /* Touch-friendly target for mobile & tablet */
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #272b33;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+      background: var(--bg-soft);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #ffffff;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-1px);
+    }
+
+    .mobile-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: clamp(40px, 6vw, 76px) 0;
+      background: radial-gradient(circle at top right, #eef2ff 0%, var(--bg-soft) 45%, #ffffff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(28px, 4vw, 48px);
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--tech-blue);
+    }
+
+    .hero h1 {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.9rem, 4.2vw, 3.35rem);
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: clamp(0.96rem, 1.6vw, 1.06rem);
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 26px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 700;
+    }
+
+    .stat span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: clamp(24px, 4vw, 38px);
+      text-align: center;
+      box-shadow: 0 20px 45px rgba(17, 19, 23, 0.06);
+    }
+
+    .hero-logo-lg {
+      width: clamp(120px, 18vw, 165px);
+      margin: 0 auto 16px;
+    }
+
+    .hero-card h2 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      letter-spacing: 0.14em;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0 auto 18px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tech-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+    }
+
+    .location-pill {
+      background: var(--bg-dark);
+      color: #ffffff;
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    /* Sections */
+    section {
+      padding: clamp(48px, 6vw, 76px) 0;
+    }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--tech-blue);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+      letter-spacing: 0.03em;
+    }
+
+    /* Search & Filter Toolbar (Optimized for Mobile, Tablet, Laptop) */
+    .catalog-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .search-box {
+      flex: 1 1 260px;
+      max-width: 360px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.92rem;
+      background: var(--bg-soft);
+      color: var(--text);
+      outline: none;
+      transition: border-color var(--transition), background var(--transition);
+    }
+
+    .search-box input:focus {
+      border-color: var(--text);
+      background: #ffffff;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .filter-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .filter-btn {
+      min-height: 42px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--text);
+      color: #ffffff;
+      border-color: var(--text);
+    }
+
+    /* Product Grid: 3 cols Laptop -> 2 cols Tablet -> 1 col Mobile */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(17, 19, 23, 0.07);
+    }
+
+    .product-thumb {
+      aspect-ratio: 16 / 11;
+      background: var(--bg-soft);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(13, 15, 18, 0.9);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+
+    .product-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-cat {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--tech-blue);
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .product-specs {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex: 1;
+    }
+
+    .product-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .product-price {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .btn-sm {
+      min-height: 40px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 40px 20px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+    }
+
+    /* Why Us & Community */
+    .about-section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(24px, 4vw, 48px);
+      align-items: center;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .feature-item h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .feature-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .social-box {
+      background: var(--bg-dark);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: clamp(24px, 4vw, 40px);
+    }
+
+    .social-box h3 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+      margin-bottom: 12px;
+    }
+
+    .social-box p {
+      color: #c5cbd6;
+      font-size: 0.94rem;
+      margin-bottom: 24px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-light {
+      background: #ffffff;
+      color: #111317;
+    }
+
+    .btn-light:hover {
+      background: #e5e7eb;
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-ghost-light:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Store & Map */
+    .store-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .store-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(22px, 3vw, 32px);
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .info-row {
+      margin-bottom: 16px;
+    }
+
+    .info-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .store-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .map-frame {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 340px;
+      background: var(--bg-soft);
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-dark);
+      color: #cfd5df;
+      padding: 52px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #232730;
+    }
+
+    .footer-brand {
+      font-family: "Cinzel", serif;
+      color: #ffffff;
+      font-size: 1.2rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    footer h4 {
+      color: #ffffff;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    footer ul a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: #939aa6;
+    }
+
+    /* Desktop/Tablet Floating WhatsApp */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      background: var(--whatsapp);
+      color: #ffffff;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Mobile Bottom Action Bar (hidden on tablet/laptop) */
+    .mobile-bottom-bar {
+      display: none;
+    }
+
+    /* Tablet Breakpoint (601px - 1024px) */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .store-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Mobile Breakpoint (<= 680px) */
+    @media (max-width: 680px) {
+      body {
+        padding-bottom: 68px; /* Space for sticky mobile bar */
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 20px 20px;
+        gap: 6px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 4px;
+        border-bottom: 1px solid var(--bg-soft);
+      }
+
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-flex;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .wa-float {
+        display: none;
+      }
+
+      .mobile-bottom-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 95;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border);
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      }
+
+      .mobile-bottom-bar a {
+        min-height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .mb-call {
+        background: var(--bg-soft);
+        color: var(--text);
+        border: 1px solid var(--border);
+      }
+
+      .mb-wa {
+        background: var(--whatsapp);
+        color: #ffffff;
+      }
+
+      .mb-map {
+        background: var(--bg-dark);
+        color: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="top-bar">
+    Imphal Tech &amp; Gadget Hub &bull; Mobiles, Laptops &amp; Kids Mini Cameras
+    <a href="https://wa.me/918415808228?text=Hello%20Khuman%20Keithel%2C%20please%20share%20today%27s%20available%20electronics%20stock." target="_blank" rel="noopener">Check Stock</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <svg class="brand-mark" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="8,8 50,34 32,45 12,33" fill="#111317" />
+          <polygon points="112,8 70,34 88,45 108,33" fill="#111317" />
+          <polygon points="28,54 57,38 57,60 38,72" fill="#111317" />
+          <polygon points="92,54 63,38 63,60 82,72" fill="#111317" />
+        </svg>
+        <div>
+          <span class="brand-name">KHUMAN KEITHEL</span>
+          <span class="brand-sub">Bond Khuman &bull; Electronics &amp; Tech</span>
+        </div>
+      </a>
+
+      <nav id="mainNav">
+        <a href="#catalog">Tech Catalog</a>
+        <a href="#about">Why Us</a>
+        <a href="#visit">Imphal Store</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="https://wa.me/918415808228?text=Hello%20Khuman%20Keithel%2C%20I%20want%20to%20inquire%20about%20a%20device." target="_blank" rel="noopener">
+          WhatsApp Store
+        </a>
+        <button class="mobile-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Trusted by 28.7K+ Followers on Instagram
+          </div>
+          <h1>Smartphones, Laptops &amp; Everyday Tech in Imphal.</h1>
+          <p>
+            Welcome to <strong>Khuman Keithel</strong> (associated with <strong>Bond Khuman</strong>). Shop inspected smartphones, work &amp; study laptops, kids' mini digital cameras, and smart gadgets—right from your phone, tablet, or laptop, or visit our store in Pishumthong.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#catalog">Browse Tech Deals</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/918415808228?text=Hi%20Khuman%20Keithel%2C%20please%20share%20today%27s%20mobile%20%26%20laptop%20price%20list." target="_blank" rel="noopener">
+              WhatsApp +91 84158 08228
+            </a>
+            <a class="btn btn-outline" href="#visit">Store Directions</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>28.7K+</strong>
+              <span>IG Followers</span>
+            </div>
+            <div class="stat">
+              <strong>Mobiles &amp; PC</strong>
+              <span>Laptops &amp; Gadgets</span>
+            </div>
+            <div class="stat">
+              <strong>Imphal</strong>
+              <span>Walk-in Store</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <svg class="hero-logo-lg" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Khuman Keithel Logo">
+            <polygon points="8,8 50,34 32,45 12,33" fill="#111317" />
+            <polygon points="112,8 70,34 88,45 108,33" fill="#111317" />
+            <polygon points="28,54 57,38 57,60 38,72" fill="#111317" />
+            <polygon points="92,54 63,38 63,60 82,72" fill="#111317" />
+          </svg>
+          <h2>KHUMAN KEITHEL</h2>
+          <p>Curated Electronics &amp; Smart Gadgets by Bond Khuman</p>
+
+          <div class="tech-tags">
+            <span class="tech-pill">Mobiles</span>
+            <span class="tech-pill">Laptops</span>
+            <span class="tech-pill">Kids Mini Cameras</span>
+            <span class="tech-pill">Tech Accessories</span>
+          </div>
+
+          <div class="location-pill">
+            Opposite Pishumthong Oinam Leikai Crematorium, Imphal
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Electronics Showcase</div>
+            <h2 class="section-title">Featured Gadgets &amp; Devices</h2>
+          </div>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="filter-tabs" role="tablist" aria-label="Device Categories">
+            <button class="filter-btn active" data-filter="all">All Devices</button>
+            <button class="filter-btn" data-filter="mobiles">Mobiles</button>
+            <button class="filter-btn" data-filter="laptops">Laptops</button>
+            <button class="filter-btn" data-filter="cameras">Kids Mini Cameras</button>
+            <button class="filter-btn" data-filter="gadgets">Audio &amp; Gadgets</button>
+          </div>
+
+          <div class="search-box">
+            <input type="search" id="searchInput" placeholder="Search mobile, laptop, camera..." aria-label="Search tech products" />
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Rendered by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Shop With Us -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div>
+          <div class="section-kicker">Trusted Tech in Imphal</div>
+          <h2 class="section-title">Why Buy Tech From Khuman Keithel?</h2>
+          <p style="color: var(--text-muted); margin-top: 10px;">
+            Backed by <strong>Bond Khuman</strong>, we help students, creators, parents, and professionals across Manipur find reliable electronics without guesswork.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <h3>Test Devices In-Store Before Buying</h3>
+              <p>Inspect displays, cameras, keyboards, and battery health personally at our Pishumthong showroom.</p>
+            </div>
+            <div class="feature-item">
+              <h3>Instant Stock &amp; Spec Check on WhatsApp</h3>
+              <p>Message +91 84158 08228 for live photos, exact RAM/storage variants, and today's pricing.</p>
+            </div>
+            <div class="feature-item">
+              <h3>Tech for Every Age &amp; Budget</h3>
+              <p>From everyday laptops and smartphones to fun, durable mini cameras for kids and handy accessories.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-box">
+          <h3>Follow Daily Tech Drops (28.7K+)</h3>
+          <p>
+            We post fresh arrivals, unboxing clips, kids' gadget demos, and flash deals regularly on Instagram and the <strong>Bond Khuman</strong> Facebook page.
+          </p>
+          <div class="social-links">
+            <a class="btn btn-light" href="https://www.instagram.com/" target="_blank" rel="noopener">
+              Instagram (28.7K+)
+            </a>
+            <a class="btn btn-ghost-light" href="https://www.facebook.com/" target="_blank" rel="noopener">
+              Facebook &bull; Bond Khuman
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store & Map -->
+    <section id="visit">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Visit &amp; Connect</div>
+            <h2 class="section-title">Imphal Store Location</h2>
+          </div>
+        </div>
+
+        <div class="store-grid" id="contact">
+          <div class="store-card">
+            <div>
+              <div class="info-row">
+                <div class="info-label">Business Name</div>
+                <div class="info-value">Khuman Keithel (Associated with Bond Khuman)</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">Store Address</div>
+                <div class="info-value">Opposite Pishumthong Oinam Leikai Crematorium, Imphal, Manipur</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">Phone / WhatsApp</div>
+                <div class="info-value"><a href="tel:+918415808228">+91 84158 08228</a></div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">Categories</div>
+                <div class="info-value">Mobile Phones &bull; Laptops &bull; Kids Mini Cameras &bull; Tech Accessories</div>
+              </div>
+            </div>
+
+            <div class="store-actions">
+              <a class="btn btn-whatsapp" href="https://wa.me/918415808228?text=Hello%20Khuman%20Keithel%2C%20I%20would%20like%20to%20visit%20the%20store." target="_blank" rel="noopener">
+                WhatsApp Store
+              </a>
+              <a class="btn btn-outline" href="tel:+918415808228">
+                Call Now
+              </a>
+              <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Pishumthong+Oinam+Leikai+Imphal" target="_blank" rel="noopener">
+                Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Khuman Keithel Store Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Pishumthong%20Oinam%20Leikai%2C%20Imphal&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">KHUMAN KEITHEL</div>
+          <p style="font-size: 0.9rem; max-width: 340px;">
+            Your Imphal destination for smartphones, laptops, kids' mini cameras, and tech essentials. Associated with Bond Khuman.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#catalog">Tech Catalog</a></li>
+            <li><a href="#about">Why Us</a></li>
+            <li><a href="#visit">Store Location</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://wa.me/918415808228" target="_blank" rel="noopener">WhatsApp: +91 84158 08228</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram (28.7K+)</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook: Bond Khuman</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Khuman Keithel. All rights reserved.</span>
+        <span>Opposite Pishumthong Oinam Leikai Crematorium, Imphal</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (Tablet & Laptop) -->
+  <a class="wa-float" href="https://wa.me/918415808228?text=Hello%20Khuman%20Keithel%2C%20I%20need%20help%20choosing%20a%20device." target="_blank" rel="noopener">
+    WhatsApp Us
+  </a>
+
+  <!-- Sticky Mobile Action Bar (Phone screens only) -->
+  <div class="mobile-bottom-bar">
+    <a class="mb-call" href="tel:+918415808228">Call</a>
+    <a class="mb-wa" href="https://wa.me/918415808228?text=Hello%20Khuman%20Keithel%2C%20I%20want%20to%20ask%20about%20a%20device." target="_blank" rel="noopener">WhatsApp</a>
+    <a class="mb-map" href="https://www.google.com/maps/search/?api=1&query=Pishumthong+Oinam+Leikai+Imphal" target="_blank" rel="noopener">Directions</a>
+  </div>
+
+  <script>
+    // Sample Tech Inventory — Update model names, specs, prices, and image URLs with your actual stock
+    const products = [
+      {
+        title: "5G Smartphone (128GB / 256GB)",
+        category: "mobiles",
+        tag: "Popular",
+        price: "Ask Price",
+        specs: "AMOLED display, fast charging, dual-SIM 5G ready. Multiple models available in-store.",
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Student & Office Ultrabook Laptop",
+        category: "laptops",
+        tag: "In Stock",
+        price: "Ask Price",
+        specs: "SSD storage, 8GB/16GB RAM options, crisp Full HD display for study, work & browsing.",
+        image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Kids Mini Digital Camera",
+        category: "cameras",
+        tag: "Best Seller",
+        price: "₹1,299",
+        specs: "Shockproof cute pocket camera for kids with 1080p video, photo frames & USB charging.",
+        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Performance Gaming & Creator Laptop",
+        category: "laptops",
+        tag: "New Arrival",
+        price: "Ask Price",
+        specs: "High-refresh screen, dedicated graphics options, backlit keyboard & fast NVMe SSD.",
+        image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Kids Instant Print Mini Camera",
+        category: "cameras",
+        tag: "Trending",
+        price: "₹2,199",
+        specs: "Fun thermal instant-print camera for children—snap and print black & white memories instantly.",
+        image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        title: "Wireless Earbuds & Smart Gadgets",
+        category: "gadgets",
+        tag: "Accessories",
+        price: "₹799+",
+        specs: "TWS earbuds, smartwatches, fast chargers, laptop stands & protective cases.",
+        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const WHATSAPP_NUMBER = "918415808228";
+    const grid = document.getElementById("productGrid");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const searchInput = document.getElementById("searchInput");
+
+    let activeCategory = "all";
+    let searchQuery = "";
+
+    function renderProducts() {
+      const filtered = products.filter(item => {
+        const matchesCat = activeCategory === "all" || item.category === activeCategory;
+        const text = `${item.title} ${item.specs} ${item.category}`.toLowerCase();
+        const matchesSearch = text.includes(searchQuery.trim().toLowerCase());
+        return matchesCat && matchesSearch;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="empty-state">No matching devices found. Message us on WhatsApp (+91 84158 08228) to check custom availability!</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const msg = encodeURIComponent(`Hello Khuman Keithel, I'm interested in "${item.title}". Please share availability and price.`);
+        const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+
+        return `
+          <article class="product-card">
+            <div class="product-thumb">
+              <span class="product-tag">${item.tag}</span>
+              <img src="${item.image}" alt="${item.title}" loading="lazy" />
+            </div>
+            <div class="product-body">
+              <div class="product-cat">${item.category}</div>
+              <h3 class="product-title">${item.title}</h3>
+              <p class="product-specs">${item.specs}</p>
+              <div class="product-foot">
+                <span class="product-price">${item.price}</span>
+                <a class="btn btn-whatsapp btn-sm" href="${waLink}" target="_blank" rel="noopener">
+                  Inquire / Order
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeCategory = btn.dataset.filter;
+        renderProducts();
+      });
+    });
+
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderProducts();
+    });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mainNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderProducts();
+  </script>
+</body>
+</html>
